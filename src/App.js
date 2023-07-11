@@ -1,15 +1,20 @@
 import React from 'react';
 import './App.css';
-import { Router, Route } from 'wouter';
-//import { Home } from './screens/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import { FindVeknid } from './screens/FindVeknId';
+import { Home } from './screens/Home';
 
 function App() {
   return (
-    <Router>
-      <Route path="/" component={FindVeknid} />
-      <Route path="/find-veknid" component={FindVeknid} />
-    </Router>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/find-veknid" element={<FindVeknid />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
