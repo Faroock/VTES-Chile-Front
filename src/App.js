@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { FindVeknid } from './screens/FindVeknId';
 import { Home } from './screens/Home';
@@ -8,12 +8,12 @@ import { Home } from './screens/Home';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/find-veknid" element={<FindVeknid />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </>
   );
 }
