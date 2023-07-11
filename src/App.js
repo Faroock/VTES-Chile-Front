@@ -7,7 +7,7 @@ import { FindVeknid } from './screens/FindVeknId';
 function App() {
   return (
     <Router>
-      <Route path="/" component={Home} />
+      <Route path="/" component={FindVeknid} />
       <Route path="/find-veknid" component={FindVeknid} />
     </Router>
   );
