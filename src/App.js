@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Router, Route } from 'wouter';
-import { Home } from './screens/Home';
+//import { Home } from './screens/Home';
 import { FindVeknid } from './screens/FindVeknId';
 
 function App() {
