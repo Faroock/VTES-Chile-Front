@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getPlayerList } from "../services/vekn";
 import { PlayerList } from "../components/PlayerList";
 import { CircularProgress, Box } from '@mui/material';
+import { Helmet } from 'react-helmet';
+
 
 export const FindVeknid = () => {
     const [playerList, setPlayerList] = useState([]);
@@ -20,7 +22,12 @@ export const FindVeknid = () => {
             {loading ? <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 540 }}>
                 <CircularProgress />
             </Box> : 
-            <PlayerList playerList={playerList} />
+            <>
+                <Helmet>
+                    <title>Buscar jugador en VEKN</title>
+                </Helmet>
+                <PlayerList playerList={playerList} />
+            </>
             }
         </>
     );
