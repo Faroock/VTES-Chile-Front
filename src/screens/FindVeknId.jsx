@@ -25,6 +25,7 @@ export const FindVeknid = () => {
             <>
                 <Helmet>
                     <title>Buscar jugador en VEKN</title>
+                    <meta name="description" content="Webapp para buscar los datos de algún jugador en la BD de la VEKN" />
                 </Helmet>
                 <PlayerList playerList={playerList} />
             </>
