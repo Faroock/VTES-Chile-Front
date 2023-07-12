@@ -59,7 +59,7 @@ export const PlayerList = ({ playerList = [] }) => {
                                     <TableCell
                                         key={column.id}
                                         align={column.align}
-                                        style={{ minWidth: column.minWidth }}
+                                        style={{ minWidth: column.minWidth, backgroundColor: '#e0e0e0', fontWeight: 'bold' }}
                                     >
                                         {column.label}
                                     </TableCell>
