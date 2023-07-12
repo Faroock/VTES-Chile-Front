@@ -1,18 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { getPlayerList } from "../services/vekn";
+import { PlayerList } from "../components/PlayerList";
 
 export const FindVeknid = () => {
+    const [playerList, setPlayerList] = useState([]);
 
     useEffect(() => {
         getPlayerList().then((response) => {
-            console.log(response);
+            setPlayerList(response);
         }
         );
     }, []);
 
     return (
         <>
-            <h1>Find Vekn Id</h1>
+            <PlayerList playerList={playerList} />
         </>
     );
 };
