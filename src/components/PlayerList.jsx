@@ -41,7 +41,6 @@ export const PlayerList = ({ playerList = [] }) => {
         setPlayers(filteredPlayers.slice(0, rowsPerPage));
         setTotalPlayers(filteredPlayers.length);
     };
-    console.log({loading});
 
     return (
         <>
